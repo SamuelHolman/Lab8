@@ -126,8 +126,10 @@ public class InsuranceEstimatorGUI extends javax.swing.JFrame {
             
         } catch (InvalidAgeException ex) {
             JOptionPane.showMessageDialog(null, "Only valid ages are allowed. A valid age is an age between 5 and 110.");
-        } catch (Exception e) {
+        } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "Please enter a valid number");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Unknown Error");
         }
     }//GEN-LAST:event_btnCalculateActionPerformed
 
